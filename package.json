@@ -1,0 +1,19 @@
+{
+  "name": "daruk-template",
+  "version": "0.0.1",
+  "description": "daruk template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.weibo.cn:2222/jingyu16/daruk-template.git"
+  },
+  "keywords": [
+    "daruk",
+    "template"
+  ],
+  "author": "whale",
+  "license": "ISC"
+}
