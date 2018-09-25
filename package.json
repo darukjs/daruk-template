@@ -1,5 +1,5 @@
 {
-  "name": "daruk-template",
+  "name": "@sina/daruk-template",
   "version": "0.0.1",
   "description": "daruk template",
   "main": "index.js",
