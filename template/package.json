@@ -1,67 +1,29 @@
 {
-  "name": "daruk",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "nodejs server framework",
-  "main": "dist/index.js",
-  "bin": "bin/daruk.js",
+  "description": "{{description}}",
+  "main": "master.js",
   "scripts": {
-    "build": "rm -rf ./build && tsc",
-    "dev": "nodemon --exec ts-node -- example/app.js",
+    "build": "rm -rf ./dist && tsc",
+    "dev": "nodemon --exec ts-node -- app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.weibo.cn/SINA_MFE/daruk.git"
-  },
   "keywords": [
-    "framework"
+    "{{name}}","{{description}}"
   ],
   "author": [
     {
-      "name": "fuqiang6",
-      "email": "fuqiang6@staff.sina.com.cn"
+      "name": "{{author}}",
+      "email": "{{authorEmail}}"
     }
   ],
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^10.9.2",
     "nodemon": "^1.18.3",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.1"
   },
   "dependencies": {
-    "@sina/koa-logger": "^1.0.4",
-    "colors": "^1.3.2",
-    "formidable-upload-koa": "^1.0.1",
-    "global-modules-path": "^2.3.0",
-    "http-server-shutdown": "^0.0.4",
-    {{#if_in features "ioredis"}}
-    "ioredis": "^4.0.0",
-    {{/if_in}}
-    "koa": "^2.5.2",
-    "koa-body-clean": "^1.0.0",
-    "koa-bodyparser": "^4.2.1",
-    "koa-compress": "^3.0.0",
-    "koa-ejs": "^4.1.2",
-    "koa-favicon": "^2.0.1",
-    "koa-flash-simple": "^0.0.3",
-    "koa-handle-error": "^0.0.5",
-    "koa-ip": "^1.0.0",
-    "koa-json": "^2.0.2",
-    "koa-json-body": "^5.3.0",
-    "koa-jsonp": "^2.0.2",
-    "koa-proxies": "^0.7.0",
-    "koa-router": "^7.4.0",
-    "koa-session": "^5.9.0",
-    "koa-static": "^5.0.0",
-    "koa2-cors": "^2.0.6",
-    "lodash": "^4.17.10",
-    "lru-cache": "^4.1.3",
-    {{#if_in features "mysql"}}
-    "mysql": "^2.16.0",
-    {{/if_in}}
-    "nodemailer": "^4.6.8",
-    "request": "^2.88.0",
-    "sequelize": "^4.38.0"
+    "@sina/daruk": "^0.0.32"
   }
 }

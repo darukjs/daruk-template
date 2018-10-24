@@ -47,28 +47,27 @@ module.exports = {
     author: {
       when: 'isNotTest',
       type: 'string',
+      required:true,
       message: 'Author'
     },
-    features: {
-      when: 'isNotTest',
-      type: 'checkbox',
-      message: 'select the features you need',
-      choices: [
+    authorEmail:{
+      when:'isNotTest',
+      type:'string',
+      required:true,
+      message:'Email'
+    },
+    globalModules:{
+      when:'isNotTest',
+      type:'checkbox',
+      message:'select the global module you need, you must install -g by yourself',
+      choices:[
         {
-          name: 'mysql',
-          value: 'mysql',
-          short: 'mysql',
-          description: 'mysql',
-          link: 'https://github.com/mysqljs/mysql',
-          checked: false
-        },
-        {
-          name: 'ioredis',
-          value: 'ioredis',
-          short: 'ioredis',
-          description: 'ioredis',
-          link: 'https://github.com/luin/ioredis',
-          checked: false
+          name:'node-rdkafka',
+          value:'node-rdkafka',
+          short:'node-rdkafka',
+          description:'node-rdkafka in global module',
+          link:'https://github.com/Blizzard/node-rdkafka',
+          checked:false
         }
       ]
     },
