@@ -1,6 +1,6 @@
 import { Daruk, Context } from '@sina/daruk'
 
-export default function (daruk:Daruk) {
+module.exports = function (daruk:Daruk) {
   daruk.registerController({
     name: 'userListController',
     export: function () {

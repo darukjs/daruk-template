@@ -3,7 +3,7 @@
  */
 import path from 'path'
 
-export default function (globalConfig: any) {
+module.exports = function (globalConfig: any) {
   globalConfig.globalModules = {
     {{#if_in globalModules "node-rdkafka"}}
     "node-rdkafka": function () {}

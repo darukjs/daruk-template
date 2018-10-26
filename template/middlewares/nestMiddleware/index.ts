@@ -1,7 +1,7 @@
 
 import { Context } from '@sina/daruk'
 
-export default function (sum: Function) {
+module.exports = function (sum: Function) {
   return {
     name: 'nest-mid',
     export: function () {

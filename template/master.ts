@@ -3,4 +3,4 @@
  * @description prod env run this file
  */
 
- import './app'
+ require('./app')

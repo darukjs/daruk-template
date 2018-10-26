@@ -4,12 +4,13 @@
  */
 import { Context } from '@sina/daruk'
 
-export default function (userListController:Function) {
+module.exports = function (userListController:Function) {
   return {
       get: [
         {
           path: '/',
           handle: async function (ctx: Context, next: Function) {
+              // @ts-ignore
               await ctx.render('index');
               next()
           }

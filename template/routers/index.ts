@@ -4,11 +4,12 @@
  */
 import { Context } from '@sina/daruk'
 
-export default function () {
+module.exports = function () {
     return {
         get: [{
             path: '/',
             handle: async function (ctx: Context, next: Function) {
+                // @ts-ignore
                 await ctx.render('index');
             }
         }]

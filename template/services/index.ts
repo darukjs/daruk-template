@@ -4,7 +4,7 @@
  */
 import { Daruk } from '@sina/daruk'
 
-export default function (daruk:Daruk, multi:Function) {
+module.exports = function (daruk:Daruk, multi:Function) {
   daruk.registerService([{
     name: 'myService',
     export: function () {

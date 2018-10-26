@@ -17,4 +17,4 @@ const options = {
   },
 }
 
-export default Daruk('myapp', options)
+module.exports = Daruk('myapp', options)
