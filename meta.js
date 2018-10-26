@@ -35,7 +35,8 @@ module.exports = {
       when: 'isNotTest',
       type: 'string',
       required: true,
-      message: 'Project name'
+      message: 'Project name',
+      default: 'daruk-example'
     },
     description: {
       when: 'isNotTest',

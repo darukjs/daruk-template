@@ -140,7 +140,7 @@ module.exports = function (globalConfig: any) {
     testTimer: function () {
       return {
         cronTime: '* * * * * *', // 一秒一次
-        onTick: function () {
+        onTick: function (this: any) {
           this.stop() //  主动停止定时器
         },
         onComplete: function () {} // 定时器完成时的回调
