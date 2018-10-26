@@ -5,7 +5,7 @@
   "main": "master.js",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "dev": "nodemon --exec ts-node -- app.ts",
+    "dev": "nodemon --exec ts-node -- master.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -21,9 +21,33 @@
   "devDependencies": {
     "nodemon": "^1.18.3",
     "ts-node": "^7.0.1",
-    "typescript": "^3.0.1"
+    "typescript": "^3.0.1",
+    "tslint": "^5.11.0"
   },
   "dependencies": {
-    "@sina/daruk": "^0.0.32"
+    "@sina/daruk": "https://gitlab.weibo.cn/daruk/daruk.git",
+    "sequelize": "^4.38.1",
+    "request": "^2.88.0",
+    "koa-handle-error": "^0.0.5",
+    "koa-favicon": "^2.0.1",
+    "koa-bodyparser": "^4.2.1",
+    "formidable-upload-koa": "^1.0.1",
+    "koa-json-body": "^5.3.0",
+    "koa-json": "^2.0.2",
+    "koa2-cors": "^2.0.6",
+    "koa-proxies": "^0.7.0",
+    "koa-ip": "^1.0.0",
+    "koa-static": "^5.0.0",
+    "koa-jsonp": "^2.0.2",
+    "koa-compress": "^3.0.0",
+    "koa-session": "^5.9.0",
+    "koa-flash-simple": "^0.0.3",
+    "koa-ejs": "^4.1.2",
+    "koa-body-clean": "^1.0.0",
+    "shimmer": "^1.2.0",
+    "lodash": "^4.17.10",
+    "lru-cache": "^4.1.3",
+    "ioredis": "^4.0.0",
+    "mysql": "^2.16.0"
   }
 }

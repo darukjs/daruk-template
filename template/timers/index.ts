@@ -2,17 +2,19 @@
  * @author {{author}}
  * @description user timers
  */
-module.exports = function (daruk: any) {
+import { Daruk } from '@sina/daruk'
+
+export default function (daruk:Daruk) {
     daruk.registerTimer({
-        name: 'timerTest',
+        name: 'mytimer',
         config: {
             cronTime: '* * * * * *', //一秒一次
             onTick: function (this: any) {
-                console.log('timerTest onTick')
+                console.log('mytimer onTick')
                 this.stop(); //停止时会进入complete
             },
             onComplete: function () {
-                console.log('timerTest onComplete')
+                console.log('mytimer onComplete')
             }
         }
     })

@@ -47,57 +47,57 @@ module.exports = {
     author: {
       when: 'isNotTest',
       type: 'string',
-      required:true,
+      required: true,
       message: 'Author'
     },
-    authorEmail:{
-      when:'isNotTest',
-      type:'string',
-      required:true,
-      message:'Email'
+    authorEmail: {
+      when: 'isNotTest',
+      type: 'string',
+      required: true,
+      message: 'Email'
     },
-    globalModules:{
-      when:'isNotTest',
-      type:'checkbox',
-      message:'select the global module you need, you must install -g by yourself',
-      choices:[
+    globalModules: {
+      when: 'isNotTest',
+      type: 'checkbox',
+      message: 'select the global module you need, you must install it in global by yourself',
+      choices: [
         {
-          name:'node-rdkafka',
-          value:'node-rdkafka',
-          short:'node-rdkafka',
-          description:'node-rdkafka in global module',
-          link:'https://github.com/Blizzard/node-rdkafka',
-          checked:false
+          name: 'node-rdkafka',
+          value: 'node-rdkafka',
+          short: 'node-rdkafka',
+          description: 'node-rdkafka in global module',
+          link: 'https://github.com/Blizzard/node-rdkafka',
+          checked: false
         }
       ]
     },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
-      message: 'Use ESLint to lint your code?'
+      message: 'Use TSLint to lint your code?'
     },
-    lintConfig: {
-      when: 'isNotTest && lint',
-      type: 'list',
-      message: 'Pick an ESLint preset',
-      choices: [
-        {
-          name: 'Standard (https://github.com/standard/standard)',
-          value: 'standard',
-          short: 'Standard'
-        },
-        {
-          name: 'Airbnb (https://github.com/airbnb/javascript)',
-          value: 'airbnb',
-          short: 'Airbnb'
-        },
-        {
-          name: 'none (configure it yourself)',
-          value: 'none',
-          short: 'none'
-        }
-      ]
-    },
+    // lintConfig: {
+    //   when: 'isNotTest && lint',
+    //   type: 'list',
+    //   message: 'Pick an ESLint preset',
+    //   choices: [
+    //     {
+    //       name: 'Standard (https://github.com/standard/standard)',
+    //       value: 'standard',
+    //       short: 'Standard'
+    //     },
+    //     {
+    //       name: 'Airbnb (https://github.com/airbnb/javascript)',
+    //       value: 'airbnb',
+    //       short: 'Airbnb'
+    //     },
+    //     {
+    //       name: 'none (configure it yourself)',
+    //       value: 'none',
+    //       short: 'none'
+    //     }
+    //   ]
+    // },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
@@ -123,11 +123,10 @@ module.exports = {
     }
   },
   filters: {
-    '.eslintrc.js': 'lint',
-    '.eslintignore': 'lint',
-    'config/test.env.js': 'unit || e2e',
-    'build/webpack.test.conf.js': "unit && runner === 'karma'",
-    'src/router/**/*': 'router'
+    'tslint.json': 'lint'
+    // 'config/test.env.js': 'unit || e2e',
+    // 'build/webpack.test.conf.js': "unit && runner === 'karma'",
+    // 'src/router/**/*': 'router'
   },
   complete: function (data, { chalk }) {
     const green = chalk.green

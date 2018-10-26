@@ -1,13 +1,15 @@
 /**
  * 全局配置
  */
-const path = require('path');
+import path from 'path'
 
-const globalConfig: any = {
-	globalModules: {
-		"node-rdkafka": function () {},
-	},
-	service: {
+export default function (globalConfig: any) {
+  globalConfig.globalModules = {
+    {{#if_in globalModules "node-rdkafka"}}
+    "node-rdkafka": function () {}
+    {{/if_in}}
+	}
+  globalConfig.service = {
 		"ioredis": function () {},
 		"sequelize": function () {},
 		"mysql": function () {},
@@ -34,28 +36,17 @@ const globalConfig: any = {
         sinaWatch(Object.assign(defaultOption, option))
       }
     }
-	},
-	middlewareOrder: [
-		'utils2ctx',
-		'service2ctx',
-		'@sina/koa-logger',
+	}
+  globalConfig.middlewareOrder = [
 		'koa-handle-error',
-		'koa-x-request-id',
-		'asyncStore',
 		'koa-favicon',
 		'koa-static',
 		'koa-bodyparser',
-    'koa-ejs'],
-  middleware: {
+    'koa-ejs']
+  globalConfig.middleware = {
 		//https://github.com/axross/koa-handle-error 必须第一个位置
     'koa-handle-error': function (mid: Function) {
 			return mid((err: any) => { console.log(err); })
-    },
-    'koa-x-request-id': function (mid: Function) {
-			return mid({
-				key: 'requestId',
-				inject: true
-			}, this.app);
     },
     'koa-favicon': function (mid: Function) {
 			return mid(`${this.root}/public/favicon.ico`);
@@ -139,14 +130,21 @@ const globalConfig: any = {
         flush: require('zlib').Z_SYNC_FLUSH
       })
     }
-  },
-	utils: {
+  }
+  globalConfig.utils = {
 		"shimmer": function () {},
 		"lodash": function () {},
 		"lru-cache": function () {}
-	}
-};
-
-export {
-	globalConfig
+  }
+  globalConfig.timers = {
+    testTimer: function () {
+      return {
+        cronTime: '* * * * * *', // 一秒一次
+        onTick: function () {
+          this.stop() //  主动停止定时器
+        },
+        onComplete: function () {} // 定时器完成时的回调
+      }
+    }
+  }
 }
