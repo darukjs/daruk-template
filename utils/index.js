@@ -78,7 +78,7 @@ To get started:
     )}${lintMsg(data)}npm run dev\n`
   )}
 
-Documentation can be found at https://gitlab.weibo.cn/SINA_MFE/daruk
+Documentation can be found at https://gitlab.weibo.cn/daruk/daruk
 `
   console.log(message)
 }

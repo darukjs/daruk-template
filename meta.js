@@ -137,9 +137,9 @@ module.exports = {
 
     if (data.autoInstall) {
       installDependencies(cwd, data.autoInstall, green)
-        .then(() => {
-          return runLintFix(cwd, data, green)
-        })
+        // .then(() => {
+        //   return runLintFix(cwd, data, green)
+        // })
         .then(() => {
           printMessage(data, green)
         })
