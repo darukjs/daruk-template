@@ -5,7 +5,7 @@
   "main": "master.js",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "dev": "NODE_ENV=prod nodemon --exec ts-node -- master.ts",
+    "dev": "NODE_ENV=dev nodemon --exec ts-node -- master.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
