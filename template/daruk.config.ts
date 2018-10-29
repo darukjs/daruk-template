@@ -13,29 +13,7 @@ module.exports = function (globalConfig: any) {
 		"ioredis": function () {},
 		"sequelize": function () {},
 		"mysql": function () {},
-		"request": function () {},
-		"nodemailer": function (nodemailer: any) {
-      return nodemailer.createTransport({
-        debug: true,
-        host: 'smtp.sina.com',
-        secureConnection: true,
-        auth: {
-          user: 'fedvip',
-          pass: '1234qwerasdfzxcv'
-        },
-        domain: 'sina.com'
-      })
-    },
-    "@mfelibs/sina-watch": function (sinaWatch: any) {
-      return function (option: any) {
-        const defaultOption = {
-          service: 'Daruk Server',
-          // 0 微信，1 微博，2 邮件
-          channel: '0'
-        }
-        sinaWatch(Object.assign(defaultOption, option))
-      }
-    }
+		"request": function () {}
 	}
   globalConfig.middlewareOrder = [
 		'koa-handle-error',
