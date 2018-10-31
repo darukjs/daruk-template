@@ -1,6 +1,7 @@
 import Daruk from '@sina/daruk'
 
 const options = {
+  rootPath: __dirname,
   authors: ['{{authorEmail}}'],
   // sina-watch提醒账号，填写邮箱前缀
   sinaWatchAccounts: [],
