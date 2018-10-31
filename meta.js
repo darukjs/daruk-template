@@ -37,14 +37,14 @@ module.exports = function (data) {
         type: 'string',
         required: true,
         message: 'Project name',
-        default: 'daruk-example'
+        default: data.destDirName || 'daruk-example'
       },
       description: {
         when: 'isNotTest',
         type: 'string',
         required: false,
         message: 'Project description',
-        default: data.destDirName || 'A daruk project'
+        default: 'A daruk project'
       },
       author: {
         when: 'isNotTest',
