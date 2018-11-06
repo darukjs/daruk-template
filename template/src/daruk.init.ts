@@ -18,4 +18,4 @@ const options = {
   },
 }
 
-module.exports = Daruk('myapp', options)
+module.exports = Daruk('{{name}}', options)

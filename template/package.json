@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rm -rf ./dist && tsc && cp -r ./src/view ./dist/src/view && cp -r ./src/public ./dist/src/public",
     "dev": "NODE_ENV=dev nodemon --exec ts-node -- master.ts",
+    "prod": "pm2 start ./dist/pm2.config.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
