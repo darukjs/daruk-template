@@ -16,6 +16,12 @@ const options = {
     name: 'test',
     password: '123'
   },
+  logger: {
+    level: process.env.NODE_ENV === 'prod' ? 'info' : 'silly',
+    logExt: {
+      logType: '{{name}}'
+    }
+  }
 }
 
 module.exports = Daruk('{{name}}', options)
