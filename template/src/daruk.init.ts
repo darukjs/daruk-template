@@ -1,11 +1,13 @@
 import Daruk from '@sina/daruk'
 
+const prod = process.env.NODE_ENV === 'prod' && process.env.NODE_ENV === 'production'
+
 const options = {
   rootPath: __dirname,
   authors: ['{{authorEmail}}'],
   // sina-watch提醒账号，填写邮箱前缀
   sinaWatchAccounts: [],
-  debug: process.env.NODE_ENV !== 'prod' && process.env.NODE_ENV !== 'production',
+  debug: !prod,
   // 开启异步调用追踪
   // https://www.npmjs.com/package/async-local-storage
   enableAls: false,
@@ -17,7 +19,7 @@ const options = {
     password: '123'
   },
   logger: {
-    level: process.env.NODE_ENV === 'prod' ? 'info' : 'silly',
+    level: prod ? 'info' : 'silly',
     logExt: {
       logType: '{{name}}'
     }
