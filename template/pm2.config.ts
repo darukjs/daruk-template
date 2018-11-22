@@ -3,6 +3,7 @@ module.exports = {
     name: '{{name}}',
     script: './master.js',
     kill_timeout: 10000,
+    max_memory_restart: '1024M',
     watch: true,
     env: {
       'NODE_ENV': 'prod'
