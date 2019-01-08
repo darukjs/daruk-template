@@ -1,5 +1,6 @@
 import Daruk from '@sina/daruk'
 
+// @ts-ignore
 const prod = process.env.NODE_ENV === 'prod' && process.env.NODE_ENV === 'production'
 
 const options = {
@@ -26,4 +27,4 @@ const options = {
   }
 }
 
-module.exports = Daruk('{{name}}', options)
+export default Daruk('{{name}}', options)

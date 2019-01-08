@@ -4,7 +4,7 @@
  */
 import { Daruk, Context } from '@sina/daruk'
 
-module.exports = function (daruk:Daruk) {
+export default function (daruk:Daruk) {
   daruk.registerMiddleware({
     name: 'koa-test-mid',
     export: function () {

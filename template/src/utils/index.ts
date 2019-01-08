@@ -4,7 +4,7 @@
  */
 import { Daruk } from '@sina/daruk'
 
-module.exports = function (daruk:Daruk) {
+export default function (daruk:Daruk) {
   daruk.registerUtil({
     name: 'sum',
     export: function () {

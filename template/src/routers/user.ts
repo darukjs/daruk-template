@@ -4,7 +4,7 @@
  */
 import { Context } from '@sina/daruk'
 
-module.exports = function (userListController:Function) {
+export default function (userListController:Function) {
   return {
       get: [
         {

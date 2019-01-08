@@ -4,7 +4,7 @@
  */
 import { Context } from '@sina/daruk'
 
-module.exports = function () {
+export default function () {
     return {
         get: [{
             path: '/',
