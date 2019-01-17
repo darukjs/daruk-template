@@ -2,32 +2,26 @@
  * 全局配置
  */
 import path from 'path'
+import { Daruk } from '@sina/daruk'
 
-export default function (globalConfig: any) {
-  globalConfig.globalModules = {
-    {{#if_in globalModules "node-rdkafka"}}
-    "node-rdkafka": function () {}
-    {{/if_in}}
-	}
-  globalConfig.service = {
-		"ioredis": function () {},
-		"sequelize": function () {},
-		"mysql": function () {},
-		"request": function () {}
-	}
-  globalConfig.middlewareOrder = [
+export default function (daruk:Daruk) {
+  const { rootPath } = daruk.options
+
+  const darukConfig:any = {}
+
+  darukConfig.middlewareOrder = [
 		'koa-handle-error',
 		'koa-favicon',
 		'koa-static',
 		'koa-bodyparser',
     'koa-ejs']
-  globalConfig.middleware = {
+  darukConfig.middleware = {
 		//https://github.com/axross/koa-handle-error 必须第一个位置
     'koa-handle-error': function (mid: Function) {
 			return mid((err: any) => { console.log(err); })
     },
     'koa-favicon': function (mid: Function) {
-			return mid(`${this.root}/public/favicon.ico`);
+			return mid(`${rootPath}/public/favicon.ico`);
     },
 		//https://github.com/koajs/bodyparser
     'koa-bodyparser': function (mid: Function) {
@@ -35,7 +29,7 @@ export default function (globalConfig: any) {
     },
 		//https://github.com/PaulRosset/formidable-upload-koa
     'formidable-upload-koa': function (mid: Function) {
-			return mid({ uploadDir: `${this.root}`, keepExtensions: true })
+			return mid({ uploadDir: `${rootPath}`, keepExtensions: true })
     },
 		//https://github.com/venables/koa-json-body
     'koa-json-body': function (mid: Function) {
@@ -68,7 +62,7 @@ export default function (globalConfig: any) {
     },
     //https://github.com/koajs/static
 		'koa-static': function (mid: Function) {
-			return mid(path.join(this.root, './public'));
+			return mid(path.join(rootPath, './public'));
     },
     //https://github.com/kilianc/koa-jsonp post支持iframe,默认参数callback
 		'koa-jsonp': function (mid: Function) {
@@ -93,8 +87,8 @@ export default function (globalConfig: any) {
     },
 		//https://github.com/koajs/ejs
 		'koa-ejs': function (mid: Function) {
-			mid(this.app, {
-				root: path.join(this.root, './view'),
+			mid(daruk, {
+				root: path.join(rootPath, './view'),
 				viewExt: 'html',
 				cache: true,
 				debug: false
@@ -109,20 +103,18 @@ export default function (globalConfig: any) {
       })
     }
   }
-  globalConfig.utils = {
-		"shimmer": function () {},
-		"lodash": function () {},
-		"lru-cache": function () {}
+  darukConfig.util = {
+		"testUtil": function () {},
   }
-  globalConfig.timers = {
-    testTimer: function () {
-      return {
-        cronTime: '* * * * * *', // 一秒一次
-        onTick: function (this: any) {
-          this.stop() //  主动停止定时器
-        },
-        onComplete: function () {} // 定时器完成时的回调
-      }
+  darukConfig.timer = {
+    testTimer: {
+      cronTime: '* * * * * *', // 一秒一次
+      onTick: function (this: any) {
+        this.stop() //  主动停止定时器
+      },
+      onComplete: function () {} // 定时器完成时的回调
     }
   }
+
+  return darukConfig
 }

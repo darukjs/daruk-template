@@ -27,4 +27,4 @@ const options = {
   }
 }
 
-export default Daruk('{{name}}', options)
+export default new Daruk('{{name}}', options)
