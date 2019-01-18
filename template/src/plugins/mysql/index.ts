@@ -4,4 +4,4 @@ const mysql = {
   }
 }
 
-export default mysql
+export default () => mysql

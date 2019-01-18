@@ -17,7 +17,7 @@ export default function () {
         },
         {
           path: '/list',
-          handle: (ctx: Context) => ctx.userListController.index()
+          handle: (ctx: Context) => ctx.controller.userList.index()
         }
       ],
       post: {

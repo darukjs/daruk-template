@@ -1,5 +1,5 @@
 /**
- * 全局配置
+ * Daruk 配置
  */
 import path from 'path'
 import { Daruk } from '@sina/daruk'
@@ -79,7 +79,7 @@ export default function (daruk:Daruk) {
 		'koa-session': function (mid: Function) {
 			return mid({
 				key: 'koa:session'
-			}, this.app);
+			}, daruk);
 		},
 		//https://github.com/ifraixedes/node-koa-flash-simple
 		'koa-flash-simple':function (mid: Function) {

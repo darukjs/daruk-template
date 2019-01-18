@@ -4,7 +4,7 @@
  */
 
 
-function sort (arr:[]) {
+function sort (arr:Array<string|number>) {
   return arr.sort()
 }
 
