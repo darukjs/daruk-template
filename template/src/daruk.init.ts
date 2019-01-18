@@ -1,4 +1,4 @@
-import Daruk from '@sina/daruk'
+import { Daruk } from '@sina/daruk'
 
 // @ts-ignore
 const prod = process.env.NODE_ENV === 'prod' && process.env.NODE_ENV === 'production'
