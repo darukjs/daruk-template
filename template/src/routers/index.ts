@@ -9,7 +9,6 @@ export default function () {
         get: [{
             path: '/',
             handle: async function (ctx: Context, next: Function) {
-                // @ts-ignore
                 await ctx.render('index');
             }
         }]

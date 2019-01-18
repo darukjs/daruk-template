@@ -12,12 +12,16 @@ const options = {
   // 开启异步调用追踪
   // https://www.npmjs.com/package/async-local-storage
   enableAls: false,
-  // 开启监控路由
-  enableMonitor: true,
-  // 访问监控信息路由的认证信息
-  auth: {
-    name: 'test',
-    password: '123'
+  // 开启v8 profiler 监控路由
+  monitor: {
+    enable: false,
+    v8AnalyticsPath: '',
+    v8ProfilerPath: '',
+    // 访问监控信息路由的认证信息
+    auth: {
+      name: 'test',
+      password: '123'
+    }
   },
   logger: {
     level: prod ? 'info' : 'silly',

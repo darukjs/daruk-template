@@ -10,7 +10,6 @@ export default function () {
         {
           path: '/',
           handle: async function (ctx: Context, next: Function) {
-              // @ts-ignore
               await ctx.render('index');
               next()
           }

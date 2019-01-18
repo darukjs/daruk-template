@@ -1,8 +1,7 @@
 import daruk from './daruk.init'
 
-const port = 3000
-const host = '127.0.0.1'
+const port = process.env.PORT || 3000
 
-daruk.run(port, host, () => {
-  daruk.logger.info(`服务已启动，访问 http://${host}:3000 查看效果`)
+daruk.run(port, () => {
+  daruk.logger.info(`服务已启动，访问 http://localhost:3000 查看效果`)
 })
