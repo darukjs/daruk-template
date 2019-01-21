@@ -10,14 +10,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "{{name}}","{{description}}"
+    "{{name}}",
+    "{{description}}"
   ],
-  "author": [
-    {
-      "name": "{{author}}",
-      "email": "{{authorEmail}}"
-    }
-  ],
+  "author": {
+    "name": "{{author}}",
+    "email": "{{authorEmail}}"
+  },
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.3",
