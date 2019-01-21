@@ -28,6 +28,7 @@
     "tslint": "^5.11.0"
   },
   "dependencies": {
+    "@types/node": "^8.0.53",
     "@sina/daruk": "https://gitlab.weibo.cn/daruk/daruk.git#refactor",
     "sequelize": "^4.38.1",
     "request": "^2.88.0",
