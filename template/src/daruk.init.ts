@@ -1,7 +1,7 @@
-import { Daruk } from '@sina/daruk'
+import { Daruk } from '@sina/daruk';
 
 // @ts-ignore
-const prod = process.env.NODE_ENV === 'prod' && process.env.NODE_ENV === 'production'
+const prod = process.env.NODE_ENV === 'prod' && process.env.NODE_ENV === 'production';
 
 const options = {
   rootPath: __dirname,
@@ -29,10 +29,6 @@ const options = {
       logType: '{{name}}'
     }
   }
-}
+};
 
-<<<<<<< HEAD
-module.exports = Daruk('{{name}}', options)
-=======
-export default new Daruk('{{name}}', options)
->>>>>>> 48956040066f7208546d1c56015f3fdc44ce070c
+export default new Daruk('{{name}}', options);
