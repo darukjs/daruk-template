@@ -58,26 +58,26 @@ module.exports = function (data) {
         required: true,
         message: 'Email'
       },
-      globalModules: {
-        when: 'isNotTest',
-        type: 'checkbox',
-        message: 'select the global module you need, you must install it in global by yourself',
-        choices: [
-          {
-            name: 'node-rdkafka',
-            value: 'node-rdkafka',
-            short: 'node-rdkafka',
-            description: 'node-rdkafka in global module',
-            link: 'https://github.com/Blizzard/node-rdkafka',
-            checked: false
-          }
-        ]
-      },
-      lint: {
-        when: 'isNotTest',
-        type: 'confirm',
-        message: 'Use TSLint to lint your code?'
-      },
+      // globalModules: {
+      //   when: 'isNotTest',
+      //   type: 'checkbox',
+      //   message: 'select the global module you need, you must install it in global by yourself',
+      //   choices: [
+      //     {
+      //       name: 'node-rdkafka',
+      //       value: 'node-rdkafka',
+      //       short: 'node-rdkafka',
+      //       description: 'node-rdkafka in global module',
+      //       link: 'https://github.com/Blizzard/node-rdkafka',
+      //       checked: false
+      //     }
+      //   ]
+      // },
+      // lint: {
+      //   when: 'isNotTest',
+      //   type: 'confirm',
+      //   message: 'Use TSLint to lint your code?'
+      // },
       // lintConfig: {
       //   when: 'isNotTest && lint',
       //   type: 'list',
@@ -125,7 +125,7 @@ module.exports = function (data) {
       }
     },
     filters: {
-      'tslint.json': 'lint'
+      // 'tslint.json': 'lint'
       // 'config/test.env.js': 'unit || e2e',
       // 'build/webpack.test.conf.js': "unit && runner === 'karma'",
       // 'src/router/**/*': 'router'

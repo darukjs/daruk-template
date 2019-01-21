@@ -5,7 +5,7 @@
   "main": "master.js",
   "scripts": {
     "build": "rm -rf ./dist && tsc && cp -r ./src/view ./dist/src/view && cp -r ./src/public ./dist/src/public",
-    "dev": "NODE_ENV=dev nodemon --exec ts-node -- master.ts",
+    "dev": "NODE_ENV=dev nodemon --exec ts-node --files master.ts",
     "prod": "pm2 start ./dist/pm2.config.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -28,7 +28,7 @@
     "tslint": "^5.11.0"
   },
   "dependencies": {
-    "@sina/daruk": "https://gitlab.weibo.cn/daruk/daruk.git",
+    "@sina/daruk": "https://gitlab.weibo.cn/daruk/daruk.git#refactor",
     "sequelize": "^4.38.1",
     "request": "^2.88.0",
     "koa-handle-error": "^0.0.5",
