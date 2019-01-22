@@ -21,9 +21,7 @@ export default () => {
     ],
     post: {
       path: '/update',
-      handle: async (ctx: Context, next: Function) => {
-        next();
-      }
+      handle: (ctx: Context) => ctx.controller.UserList.index()
     }
   };
 };

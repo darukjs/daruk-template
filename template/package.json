@@ -7,7 +7,7 @@
     "build": "rm -rf ./dist && tsc && cp -r ./src/view ./dist/src/view && cp -r ./src/public ./dist/src/public",
     "dev": "NODE_ENV=dev nodemon --exec ts-node --files master.ts",
     "prod": "pm2 start ./pm2.config.ts",
-    "test": "mocha"
+    "test": "ts-mocha tests/**/*.test.ts"
   },
   "keywords": [
     "{{name}}",
@@ -24,13 +24,15 @@
     "typescript": "^3.0.1",
     "supertest": "^3.3.0",
     "chai": "^4.1.2",
+    "ts-mocha": "^2.0.0",
     "mocha": "^5.2.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-config-alloy": "^0.2.1",
-    "tslint": "^5.11.0"
+    "tslint": "^5.11.0",
+    "@types/node": "^8.0.53",
+    "@types/supertest": "^2.0.7"
   },
   "dependencies": {
-    "@types/node": "^8.0.53",
     "@sina/daruk": "https://gitlab.weibo.cn/daruk/daruk.git#refactor",
     "sequelize": "^4.38.1",
     "request": "^2.88.0",
