@@ -14,6 +14,7 @@ export default function(daruk: Daruk) {
     'koa-favicon',
     'koa-static',
     'koa-bodyparser',
+    'koa-test-mid',
     'koa-ejs'
   ];
   darukConfig.middleware = {
