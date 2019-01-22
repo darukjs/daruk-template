@@ -10,9 +10,12 @@
       "name": "daruk launch",
       "restart": true,
       "runtimeExecutable": "nodemon",
+      "protocol": "inspector",
+      "env": {
+        "TS_NODE_FILES": true
+      },
       "args": ["${workspaceFolder}/master.ts"],
-      "runtimeArgs": ["--exec", "node", "--inspect", "-r", "ts-node/register"],
-      "protocol": "inspector"
+      "runtimeArgs": ["--exec", "node", "--inspect", "-r", "ts-node/register"]
     }
   ]
 }
