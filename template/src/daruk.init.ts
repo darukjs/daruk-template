@@ -5,7 +5,7 @@ const prod = process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'produc
 
 const options = {
   rootPath: __dirname,
-  authors: ['{{authorEmail}}'],
+  alertAccounts: ['{{authorEmail}}'],
   // sina-watch提醒账号，填写邮箱前缀
   sinaWatchAccounts: ['{{author}}'],
   debug: !prod,
