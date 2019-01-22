@@ -4,7 +4,7 @@
  */
 import { Context } from '@sina/daruk';
 
-export default function() {
+export default () => {
   return {
     get: [
       {
@@ -16,7 +16,7 @@ export default function() {
       },
       {
         path: '/list',
-        handle: (ctx: Context) => ctx.controller.userList.index()
+        handle: (ctx: Context) => ctx.controller.UserList.index()
       }
     ],
     post: {
@@ -26,4 +26,4 @@ export default function() {
       }
     }
   };
-}
+};

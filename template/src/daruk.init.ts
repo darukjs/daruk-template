@@ -1,13 +1,13 @@
 import { Daruk } from '@sina/daruk';
 
 // @ts-ignore
-const prod = process.env.NODE_ENV === 'prod' && process.env.NODE_ENV === 'production';
+const prod = process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'production';
 
 const options = {
   rootPath: __dirname,
   authors: ['{{authorEmail}}'],
   // sina-watch提醒账号，填写邮箱前缀
-  sinaWatchAccounts: [],
+  sinaWatchAccounts: ['{{author}}'],
   debug: !prod,
   // 开启异步调用追踪
   // https://www.npmjs.com/package/async-local-storage

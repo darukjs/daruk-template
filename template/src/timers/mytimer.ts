@@ -5,7 +5,7 @@
 
 import { Daruk } from '@sina/daruk';
 
-export default function(daruk: Daruk) {
+export default (daruk: Daruk) => {
   return {
     cronTime: '* * * * * *', //一秒一次
     onTick: function onTick(this: any) {
@@ -16,4 +16,4 @@ export default function(daruk: Daruk) {
       daruk.logger.info('mytimer onComplete');
     }
   };
-}
+};

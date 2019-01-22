@@ -1,7 +1,7 @@
 const mysql = {
-  async queryUserList () {
-    return ['user1', 'user2']
+  async queryUserList() {
+    return ['user1', 'user2'];
   }
-}
+};
 
-export default () => mysql
+export default () => mysql;

@@ -1,8 +1,8 @@
 /**
  * Daruk 配置
  */
-import path from 'path';
 import { Daruk } from '@sina/daruk';
+import path = require('path');
 
 export default function(daruk: Daruk) {
   const { rootPath } = daruk.options;

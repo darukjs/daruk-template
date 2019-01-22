@@ -4,7 +4,7 @@
  */
 import { Context } from '@sina/daruk';
 
-export default function() {
+export default () => {
   return {
     get: [
       {
@@ -15,4 +15,4 @@ export default function() {
       }
     ]
   };
-}
+};
