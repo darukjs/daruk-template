@@ -7,9 +7,9 @@ import { BaseController } from '@sina/daruk';
 
 export default class userListController extends BaseController {
   async index() {
-    const { userInfo } = this.ctx.service;
+    const { UserInfo } = this.ctx.service;
     const { sort } = this.ctx.util;
-    const list = await userInfo.getUserList();
+    const list = await UserInfo.getUserList();
     this.ctx.body = sort(list);
   }
 }
