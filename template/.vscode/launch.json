@@ -12,7 +12,7 @@
       "runtimeExecutable": "nodemon",
       "protocol": "inspector",
       "env": {
-        "TS_NODE_FILES": true
+        "TS_NODE_FILES": "true"
       },
       "args": ["${workspaceFolder}/master.ts"],
       "runtimeArgs": ["--exec", "node", "--inspect", "-r", "ts-node/register"]
