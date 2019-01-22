@@ -1,5 +1,5 @@
 import '@sina/daruk';
-import UserInfo from '../../src/services/userInfo';
+import UserInfo from '../../src/services/UserInfo';
 
 declare module '@sina/daruk' {
   interface Service {
