@@ -1,5 +1,4 @@
 import { expect } from 'chai';
-import daruk from '../../src/app';
 
 daruk.logger.options.disable = true;
 const { sort } = daruk.context.util;

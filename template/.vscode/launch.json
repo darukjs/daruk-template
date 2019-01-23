@@ -14,7 +14,7 @@
       "env": {
         "TS_NODE_FILES": "true"
       },
-      "args": ["${workspaceFolder}/master.ts"],
+      "args": ["${workspaceFolder}/src/index.ts"],
       "runtimeArgs": ["--exec", "node", "--inspect", "-r", "ts-node/register"]
     }
   ]
