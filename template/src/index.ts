@@ -1,11 +1,12 @@
 class MyClass {
-  constructor() {
-    this.map = {};
+  public map: any;
+  public constructor(initData = {}) {
+    this.map = initData;
   }
-  get(key) {
+  public get(key: string) {
     return this.map[key];
   }
-  set(key, val) {
+  public set(key: string, val: any) {
     return (this.map[key] = val);
   }
 }

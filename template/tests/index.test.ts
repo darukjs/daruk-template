@@ -1,13 +1,21 @@
 import { expect } from 'chai';
+import myClass from '../src/index';
 
-daruk.logger.options.disable = true;
-const { sort } = daruk.context.util;
-
-describe('test for utils', () => {
-  describe('test for sort', () => {
-    it('should get sort data', (done) => {
-      expect(sort([1, 3, 4, 5, 7, 9, 0, 2])[0]).to.equal(0);
-      done();
+describe('test for myClass', () => {
+  it('test for get method', (done) => {
+    let foo = new myClass({
+      a: 1
     });
+    expect(foo.get('a')).to.equal(1);
+    done();
+  });
+  it('test for get method', (done) => {
+    let bar = new myClass({
+      a: 1
+    });
+    expect(bar.get('a')).to.equal(1);
+    expect(bar.set('a', 2)).to.equal(2);
+    expect(bar.get('a')).to.equal(2);
+    done();
   });
 });

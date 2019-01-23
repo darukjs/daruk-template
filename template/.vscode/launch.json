@@ -7,7 +7,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "daruk launch",
+      "name": "launch",
       "restart": true,
       "runtimeExecutable": "nodemon",
       "protocol": "inspector",
