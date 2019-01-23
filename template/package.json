@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "{{description}}",
   "main": "dist/index.js",
+  "types": "./typings/index.d.ts",
   "scripts": {
     "build": "rm -rf ./dist && tsc",
     "dev": "NODE_ENV=dev nodemon --exec ts-node --files ./src/index.ts",
