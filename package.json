@@ -1,0 +1,18 @@
+{
+  "name": "daruk-template",
+  "version": "0.2.0",
+  "description": "daruk project template",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com:daruk-framework/daruk-template.git"
+  },
+  "keywords": [
+    "daruk",
+    "daruk template"
+  ],
+  "author": "whale",
+  "license": "ISC"
+}
