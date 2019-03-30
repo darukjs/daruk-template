@@ -34,7 +34,7 @@
     "@types/mocha": "^5.2.5",
     "@types/supertest": "^2.0.7",
     "@types/chai": "^4.1.7",
-    "daruk-helper": "0.1.4"
+    "daruk-helper": "^0.1.6"
   },
   "dependencies": {
     "daruk": "^0.2.4",

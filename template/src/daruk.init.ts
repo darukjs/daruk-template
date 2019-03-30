@@ -5,7 +5,6 @@ const prod = process.env.NODE_ENV === 'prod' || process.env.NODE_ENV === 'produc
 
 const options = {
   rootPath: __dirname,
-  alertAccounts: ['{{authorEmail}}'],
   debug: !prod
 };
 
