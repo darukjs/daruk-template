@@ -25,7 +25,7 @@ export default function(daruk: Daruk) {
       });
     },
     'koa-favicon': (mid: Function) => {
-      return mid(`${rootPath}/public/favicon.ico`);
+      return mid(`${rootPath}/public/Daruk.png`);
     },
     // https://github.com/koajs/bodyparser
     'koa-bodyparser': (mid: Function) => {

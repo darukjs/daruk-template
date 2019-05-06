@@ -4,8 +4,8 @@
   "description": "{{description}}",
   "main": "master.js",
   "scripts": {
-    "build": "rm -rf ./dist && tsc && cp -r ./src/view ./dist/src/view && cp -r ./src/public ./dist/src/public",
-    "dev": "NODE_ENV=dev nodemon --exec ts-node --files ./src/app.ts",
+    "build": "rimraf -rf ./dist && tsc && copyfiles ./src/view ./dist/src/view && copyfiles ./src/public ./dist/src/public",
+    "dev": "cross-env NODE_ENV=dev nodemon --exec ts-node --files ./src/app.ts",
     "prod": "pm2 start ./pm2.config.js",
     "test": "ts-mocha --exit tests/**/*.test.ts",
     "help-types": "daruk-helper help -t"
@@ -20,6 +20,9 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "rimraf": "^2.6.3",
+    "cross-env": "^5.2.0",
     "nodemon": "^1.18.3",
     "ts-node": "^7.0.1",
     "typescript": "^3.0.1",
