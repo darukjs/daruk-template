@@ -4,7 +4,7 @@
   "description": "{{description}}",
   "main": "master.js",
   "scripts": {
-    "build": "rimraf -rf ./dist && tsc && copyfiles ./src/view ./dist/src/view && copyfiles ./src/public ./dist/src/public",
+    "build": "rimraf -rf ./dist && tsc && copyfiles -f ./src/view/* ./dist/src/view && copyfiles -f ./src/public/* ./dist/src/public",
     "dev": "cross-env NODE_ENV=dev nodemon --exec ts-node --files ./src/app.ts",
     "prod": "pm2 start ./pm2.config.js",
     "test": "ts-mocha --exit tests/**/*.test.ts",
